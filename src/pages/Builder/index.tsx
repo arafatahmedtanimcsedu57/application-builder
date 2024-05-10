@@ -55,7 +55,13 @@ const Builder = () => {
         )}
       </div>
 
-      {jsonSchema.components.length ? 
+      <RenderOnRole roles={["builder"]} showNotAllowed>
+        <div className="mb-5">
+          <Button className="px-4" variant="success" onClick={()=>{setSchema(prev=>({...prev, components:[]}))}}>Create New</Button>
+        </div>
+      </RenderOnRole>
+
+      {/* {jsonSchema.components.length ?  */}
         <>
           <RenderOnRole roles={["builder"]} showNotAllowed>
             <>
@@ -83,7 +89,7 @@ const Builder = () => {
             </Card.Body>
           </Card>
         </>
-      :<></>}
+      {/*:<></>}*/}
     </>
   );
 };
