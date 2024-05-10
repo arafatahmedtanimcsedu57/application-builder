@@ -1,0 +1,9 @@
+{
+    "realm": "applicationBuilder",
+    "auth-server-url": "http://0.0.0.0:8080/",
+    "ssl-required": "external",
+    "resource": "application-builder-web",
+    "public-client": true,
+    "confidential-port": 0
+  }
+  
