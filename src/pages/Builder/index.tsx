@@ -58,16 +58,18 @@ const Builder = () => {
       {jsonSchema.components.length ? 
         <>
           <RenderOnRole roles={["builder"]} showNotAllowed>
-            <FormBuilder 
-              form={jsonSchema} 
-              onChange={onFormChange} 
-            />
+            <>
+              <FormBuilder 
+                form={jsonSchema} 
+                onChange={onFormChange} 
+              />
 
-            <div className="my-4 d-flex w-100 align-items-center justify-content-end">
-              <Button onClick={()=>handleSave()}>
-                Save This Application
-              </Button> 
-            </div>
+              <div className="my-4 d-flex w-100 align-items-center justify-content-end">
+                <Button onClick={()=>handleSave()}>
+                  Save This Application
+                </Button> 
+              </div>
+            </>
           </RenderOnRole>
           
           <hr/>

@@ -8,7 +8,7 @@ interface PropsType {
 }
 
 const RenderOnRole = ({ roles, showNotAllowed, children }: PropsType) => (
-  UserService.hasRole(roles)) ? children : showNotAllowed ? <></> : null;
+  UserService.hasRole(roles)) ? children as JSX.Element : showNotAllowed ? <></> : null;
 
 RenderOnRole.propTypes = {
   roles: PropTypes.arrayOf(PropTypes.string).isRequired,
